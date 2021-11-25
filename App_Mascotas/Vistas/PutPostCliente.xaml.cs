@@ -20,7 +20,7 @@ namespace App_Mascotas.Vistas
             InitializeComponent();
             if (Mcliente.idCliente != -1)
             {
-                txtCedula.Text=Mcliente.cedula.ToString();
+                txtCedula.Text=Mcliente.numeroDocumento.ToString();
                 txtNombre.Text=Mcliente.nombres.ToString();
                 txtApellido.Text=Mcliente.apellidos.ToString();
                 txtFecha.Text=Mcliente.fechaRegistro.ToString();

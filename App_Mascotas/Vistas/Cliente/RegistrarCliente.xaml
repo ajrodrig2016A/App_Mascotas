@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Mascotas.Vistas.RegistrarCliente">
+    <NavigationPage.TitleView>
+        <Label Text="DoctorVet - Mis Clientes" FontSize="Medium" HorizontalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="VENTANA DE REGISTRO" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="txtNumeroDocumento" Placeholder="Ingrese Cedula" Keyboard="Numeric" MaxLength="13" />
+            <Entry x:Name="txtNombre" Placeholder="Ingrese Nombres" />
+            <Entry x:Name="txtApellido" Placeholder="Ingrese Apellidos" />
+            <Label Text="Escoja Fecha" FontSize="Small" FontAttributes="Italic" />
+            <DatePicker x:Name="dtpFechaRegistro" Format="MMM dd, yyyy" />
+            <Entry x:Name="txtDireccion" Placeholder="Ingrese Direccion" />
+            <Entry x:Name="txtEmail" Placeholder="Ingrese Email" Keyboard="Email" />
+            <Entry x:Name="txtNumeroContacto" Placeholder="Ingrese el numero de contacto" MaxLength="20" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button CornerRadius="15" Margin="10" x:Name="btnAgregar" Text="Agregar" Grid.Row="0" Grid.Column="0" Clicked="btnAgregar_Clicked" />
+                <Button CornerRadius="15" Margin="10" x:Name="btnRegresar" Text="Regresar" Grid.Row="0" Grid.Column="1" Clicked="btnRegresar_Clicked" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

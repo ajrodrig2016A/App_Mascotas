@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Mascotas.Vistas.ActualizarCliente">
+    <NavigationPage.TitleView>
+        <Label Text="DoctorVet - Mis Clientes" FontSize="Medium" HorizontalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="VENTANA DE ACTUALIZACION" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Codigo Cliente: " Grid.Row="0" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtIdCliente" Text="{Binding idCliente}" IsReadOnly="True" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Numero Documento: " Grid.Row="1" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtNumeroDocumento" Text="{Binding numeroDocumento}" Grid.Row="1" Grid.Column="1" MaxLength="13" />
+                <Label Text="Nombre: " Grid.Row="2" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtNombre" Text="{Binding nombres}"  Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Apellido: " Grid.Row="3" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtApellido" Text="{Binding apellidos}"  Grid.Row="3" Grid.Column="1"/>
+                <Label Text="Fecha Registro: " Grid.Row="4" Grid.Column="0" Padding="10" />
+                <DatePicker x:Name="dtpFechaRegistro" Date="{Binding fechaRegistro}" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="Direccion: " Grid.Row="5" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtDireccion" Text="{Binding direccion}"  Grid.Row="5" Grid.Column="1"/>
+                <Label Text="Email: " Grid.Row="6" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtEmail" Text="{Binding email}"  Grid.Row="6" Grid.Column="1"/>
+                <Label Text="Numero de Contacto: " Grid.Row="7" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtNumeroContacto" Text="{Binding numeroContacto}"  Grid.Row="7" Grid.Column="1" MaxLength="20" />
+
+                <Button CornerRadius="15" Margin="10" x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="8" Grid.Column="0"/>
+                <Button CornerRadius="15" Margin="10" x:Name="btnRegresar" Text="Regresar" Clicked="btnRegresar_Clicked" Grid.Row="8" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,13 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Mascotas.Vistas.login">
+    <NavigationPage.TitleView>
+        <Label Text="Bienvenido al aplicativo movil DoctorVet" FontSize="Medium" HorizontalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Login" FontSize="Medium" />
+            <Label Text="Login" FontSize="Medium" HorizontalTextAlignment="Center"/>
             <Entry x:Name="txtusuario" Placeholder="Ingrese Usuario" />
             <Entry x:Name="txtcontra" Placeholder="Ingrese la contraseña" IsPassword="True" />
-            <Button x:Name="btnIniciar" Text="Iniciar Sesion" Clicked="btnIniciar_Clicked" />
-            <Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button CornerRadius="15" Margin="10" x:Name="btnIniciar" Text="Iniciar Sesion" Grid.Row="0" Grid.Column="0"  Clicked="btnIniciar_Clicked" />
+                <Button CornerRadius="15" Margin="10" x:Name="btnRegistrar" Text="Registrar" Grid.Row="0" Grid.Column="1" Clicked="btnRegistrar_Clicked" />
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

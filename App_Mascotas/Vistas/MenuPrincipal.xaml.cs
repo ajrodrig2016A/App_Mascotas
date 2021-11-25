@@ -54,7 +54,7 @@ namespace App_Mascotas.Vistas
             Mmenu seleccion=e.Item as Mmenu;
             if (seleccion.nombre == "Cliente")
             {
-                Navigation.PushAsync(new ViewClient());
+                Navigation.PushAsync(new ViewCliente());
             }
             else if (seleccion.nombre == "Raza")
             {

@@ -1,34 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using SQLite;
 using SQLiteNetExtensions.Attributes;
 
 namespace App_Mascotas.Modelo
 {
-    public class Cliente
+    public class Cliente : INotifyPropertyChanged
     {
-        [PrimaryKey, AutoIncrement]
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            handler?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public int idCliente { get; set; }
-        [MaxLength(15)]
-        public string cedula {  get; set; }
-        [MaxLength(50)]
+        public string numeroDocumento { get; set; }
         public string nombres { get; set; }
-        [MaxLength(50)]
         public string apellidos { get; set; }
-        [MaxLength(50)]
         public DateTime fechaRegistro { get; set; }
-        [MaxLength(50)]
         public string direccion { get; set; }
-        [MaxLength(50)]
         public string email { get; set; }
-
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public List<Mascota> Mascotas { get; set; }
-
-
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public List<Cita> Citas { get; set; }
+        public string numeroContacto { get; set; }
+        private bool _isVisible { get; set; }
+        public bool IsVisible
+        {
+            get { return _isVisible; }
+            set
+            {
+                if (_isVisible != value)
+                {
+                    _isVisible = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
 
     }

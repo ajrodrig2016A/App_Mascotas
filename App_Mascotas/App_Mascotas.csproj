@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.13.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
@@ -19,13 +20,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Vistas\Cliente\ViewCliente.xaml.cs">
+      <DependentUpon>ViewCliente.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Vistas\Cliente\ActualizarCliente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Vistas\login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\RegistrarCita.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Vistas\RegistrarCliente.xaml">
+    <EmbeddedResource Update="Vistas\Cliente\RegistrarCliente.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\RegistrarMascota.xaml">
@@ -46,7 +56,7 @@
     <EmbeddedResource Update="Vistas\ViewCita.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Vistas\ViewClient.xaml">
+    <EmbeddedResource Update="Vistas\Cliente\ViewCliente.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vistas\ViewMascota.xaml">
