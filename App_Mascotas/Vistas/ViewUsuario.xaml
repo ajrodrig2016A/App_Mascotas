@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Mascotas.Vistas.ViewUsuario">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130" />
+                <RowDefinition Height="20"   />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Frame Margin="10" CornerRadius="5">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image Source="usuario.png" Grid.RowSpan="2" Grid.Column="0" Margin="0" />
+                    <Label Text="Cliente" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" />
+                    <Label Text="Descripcion" Grid.Column="1" Grid.Row="1" VerticalTextAlignment="Start" VerticalOptions="Start" />
+
+
+                </Grid>
+            </Frame>
+
+            <Grid Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Start"  Margin="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Nombre" FontAttributes="Bold"  />
+                <Label Grid.Column="1" Text="Usuario" FontAttributes="Bold"  />
+                <Label Grid.Column="2" Text="Contraseña" FontAttributes="Bold"  />
+            </Grid>
+            <Grid Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Start">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ListView HasUnevenRows="True" 
+                   x:Name="MylistView" SeparatorColor="Aqua"
+                  ItemTapped="MylistView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5" />
+                                    </Grid.RowDefinitions>
+
+
+                                    <Label Grid.Column="0" Grid.Row="1" Text="{Binding nombre}" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center" HorizontalOptions="Center"  />
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding usuario}" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                                    <Label Grid.Column="2" Grid.Row="1" Text="{Binding password}" VerticalTextAlignment="Start" VerticalOptions="Start" HorizontalTextAlignment="Center" HorizontalOptions="Center"  />
+                                    
+                                </Grid>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <Grid Grid.Row="4" Margin="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" Text="Agregar"  CornerRadius="15" Margin="10" x:Name="btnAgregar" Clicked="btnAgregar_Clicked" />
+                
+                <Button Grid.Column="1" Grid.Row="0" Text="Cancelar"  CornerRadius="15" Margin="10" x:Name="btnCancel" Clicked="btnCancel_Clicked" />
+
+            </Grid>
+
+        </Grid>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

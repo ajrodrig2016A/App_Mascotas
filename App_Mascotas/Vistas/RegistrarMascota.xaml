@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Mascotas.Vistas.RegistrarMascota">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Picker x:Name="cmbCliente" SelectedIndex="{Binding idCliente}" ItemDisplayBinding="{Binding nombres}" />
+            
+            <Picker x:Name="cmbRaza" SelectedIndex="{Binding idRaza}" ItemDisplayBinding="{Binding nombre}" />
+            
+            
+            <Entry x:Name="txtNombre" Placeholder="Ingrese Nombre" />
+            <Label Text="Escoja Fecha" FontSize="Small" FontAttributes="Italic" />
+            <DatePicker x:Name="dtFecha" Format="MMM dd, yyyy" DateSelected="dtFecha_DateSelected" />
+            <Entry x:Name="txtFecha" Placeholder="Escoja Fecha" IsEnabled="False" />
+            <Picker x:Name="cmbGenero" />
+            <Picker x:Name="cmbster" />
+            <Entry x:Name="txtColor" Placeholder="Ingrese color" />
+            <Button x:Name="btnAgregar" Clicked="btnAgregar_Clicked" />
+            <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

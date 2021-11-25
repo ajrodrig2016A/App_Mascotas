@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Mascotas.Vistas.login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Login" FontSize="Medium" />
+            <Entry x:Name="txtusuario" Placeholder="Ingrese Usuario" />
+            <Entry x:Name="txtcontra" Placeholder="Ingrese la contraseña" IsPassword="True" />
+            <Button x:Name="btnIniciar" Text="Iniciar Sesion" Clicked="btnIniciar_Clicked" />
+            <Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

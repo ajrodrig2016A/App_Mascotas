@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Mascotas.Vistas.PutPostCliente"
+             Title="">
+    <ContentPage.Content>
+        <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Ingrese cedula" Grid.Column="0" Grid.Row="0" />
+            <Entry x:Name="txtCedula" Grid.Column="1" Grid.Row="0" Keyboard="Numeric" />
+            
+            <Label Text="Ingrese nombres" Grid.Column="0" Grid.Row="1" />
+            <Entry x:Name="txtNombre" Grid.Column="1" Grid.Row="1" />
+            
+            <Label Text="Ingrese apellidos" Grid.Column="0" Grid.Row="2" />
+            <Entry x:Name="txtApellido" Grid.Column="1" Grid.Row="2" />
+
+            <Label Text="Ingrese fecha de Ingreso" Grid.Column="0" Grid.Row="3" />
+            <Entry x:Name="txtFecha" Grid.Column="1" Grid.Row="3" />
+
+            <Label Text="Ingrese direccion" Grid.Column="0" Grid.Row="4" />
+            <Entry x:Name="txtDireccion" Grid.Column="1" Grid.Row="4" />
+
+            <Label Text="Ingrese email" Grid.Column="0" Grid.Row="5" />
+            <Entry x:Name="txtemail" Grid.Column="1" Grid.Row="5" />
+        </Grid>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="btnOk" Text="Aceptar" Grid.Column="0" Grid.Row="0" Clicked="btnOk_Clicked" />
+                <Button x:Name="btnCancel" Text="Cancelar" Grid.Column="1" Grid.Row="0" Clicked="btnCancel_Clicked" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
